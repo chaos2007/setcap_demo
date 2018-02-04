@@ -5,7 +5,6 @@ dependancies: pistache
 
 .PHONY: pistache
 pistache:
-	-git clone https://github.com/oktal/pistache.git
 	cd pistache; git submodule update --init
 	-cd pistache; mkdir build; 
 	cd pistache/build; cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release .. ; make; sudo make install
