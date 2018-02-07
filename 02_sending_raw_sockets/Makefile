@@ -8,4 +8,7 @@ run:
 	. env/bin/activate; python send_packet.py
 
 setcap:
-	sudo setcap cap_net_raw=eip env/bin/python2
+	. env/bin/activate; sudo setcap cap_net_raw=eip $$(readlink -f $$(which python))
+
+getcap:
+	. env/bin/activate; getcap cap_net_raw=eip $$(readlink -f $$(which python))

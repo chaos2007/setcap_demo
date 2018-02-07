@@ -1,7 +1,7 @@
 all: dependencies
 	g++ driver.cpp -lpistache -lpthread -std=c++11 -o driver.out
 
-dependancies: pistache
+dependencies: pistache
 
 .PHONY: pistache
 pistache:
