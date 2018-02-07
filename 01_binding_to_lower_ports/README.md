@@ -1,5 +1,7 @@
 1. Get environment setup.
+```
 make all
+```
 
 2. Try and run the application, should fail.
 make run
