@@ -1,4 +1,4 @@
-all: dependancies
+all: dependencies
 	g++ driver.cpp -lpistache -lpthread -std=c++11 -o driver.out
 
 dependancies: pistache
@@ -10,5 +10,11 @@ pistache:
 	cd pistache/build; cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release .. ; make; sudo make install
 
 .PHONY: test
-test: dependancies
+test: dependencies
 	cd pistache/build; make test
+
+run: 
+	./driver.out
+
+setcap: 
+	sudo setcap cap_net_bind_service=eip driver.out

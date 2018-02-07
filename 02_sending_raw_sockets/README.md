@@ -8,7 +8,7 @@ make run
 make setcap
 
 4. For verification, check the binary, it should list the new capability.
-getcap driver.out
+getcap env/bin/python2
 
 5. Try and run the application again, it should run.
 make run
